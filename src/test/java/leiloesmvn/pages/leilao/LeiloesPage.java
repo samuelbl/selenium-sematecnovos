@@ -20,12 +20,12 @@ public class LeiloesPage {
 	}
 
 	public boolean existe(String produto, double valor, String usuario, boolean usado) {
-		return driver.getPageSource().contains(produto) && driver.getPageSource().contains(String.valueOf(valor)) && driver.getPageSource().contains(usado ? "Sim" : "Não");
+		return driver.getPageSource().contains(produto) && driver.getPageSource().contains(String.valueOf(valor)) && driver.getPageSource().contains(usado ? "Sim" : "Nao");
 	}
 
 	public NovoLeilaoPage novo() {
 		// clica no link de novo leilao
-		driver.findElement(By.linkText("Novo Leilão")).click();
+		driver.findElement(By.linkText("Novo Leilao")).click();
 		// retorna a classe que representa a nova pagina
 		return new NovoLeilaoPage(driver);
 	}

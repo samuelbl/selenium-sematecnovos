@@ -18,7 +18,7 @@ public class UsuariosPage {
 
 	public void deletaUsuarioNaPosicao(int posicao) {
 		driver.findElements(By.tagName("button")).get(posicao - 1).click();
-		// pega o alert que est� aberto
+		// pega o alert que esta aberto
 		Alert alert = driver.switchTo().alert();
 		// confirma
 		alert.accept();

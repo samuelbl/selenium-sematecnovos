@@ -17,7 +17,7 @@ public class _04_TesteAutomatizado {
 	@Test
 	public void deveAdicionarUmUsuario() {
 		driver.get("http://localhost:8080/leiloesmvn/usuarios");
-		driver.findElement(By.linkText("Novo Usu�rio")).click();
+		driver.findElement(By.linkText("Novo Usuario")).click();
 		WebElement nome = driver.findElement(By.name("usuario.nome"));
 		WebElement email = driver.findElement(By.name("usuario.email"));
 		nome.sendKeys("Usuario Teste");
@@ -42,7 +42,7 @@ public class _04_TesteAutomatizado {
 	@Test
 	public void naoDeveAdicionarUmUsuarioSemNome() {
 		driver.get("http://localhost:8080/leiloesmvn/usuarios");
-		driver.findElement(By.linkText("Novo Usu�rio")).click();
+		driver.findElement(By.linkText("Novo Usuario")).click();
 		WebElement email = driver.findElement(By.name("usuario.email"));
 		email.sendKeys("usuario@teste.com");
 		email.submit();
@@ -52,7 +52,7 @@ public class _04_TesteAutomatizado {
 	@Test
 	public void naoDeveAdicionarUmUsuarioSemNomeOuEmail() {
 		driver.get("http://localhost:8080/leiloesmvn/usuarios");
-		driver.findElement(By.linkText("Novo Usu�rio")).click();
+		driver.findElement(By.linkText("Novo Usuario")).click();
 		WebElement email = driver.findElement(By.name("usuario.email"));
 		email.submit();
 		assertTrue(driver.getPageSource().contains("Nome obrigatorio!"));
